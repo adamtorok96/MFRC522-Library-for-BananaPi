@@ -36,7 +36,7 @@ void MFRC522::SpiWrite(char data) {
     message.bits_per_word   = 8;
     message.cs_change       = 0;
 
-    auto ret = ioctl(spi, SPI_IOC_MESSAGE(1), message);
+    int ret = ioctl(spi, SPI_IOC_MESSAGE(1), message);
 
     if( ret < 0 )
         printf("error\n");
