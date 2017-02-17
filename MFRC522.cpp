@@ -1,3 +1,4 @@
+#include <exception>
 #include "MFRC522.h"
 
 MFRC522::MFRC522(const char *dev, unsigned int speed) {
@@ -6,10 +7,8 @@ MFRC522::MFRC522(const char *dev, unsigned int speed) {
 
     spi = open(dev, O_RDWR);
 
-    if( spi < 0 ) {
-        printf("Failed to open spi: %d\n", spi);
-        return;
-    }
+    if( spi < 0 )
+        throw std::exception();
 
     wiringPiSetup();
 

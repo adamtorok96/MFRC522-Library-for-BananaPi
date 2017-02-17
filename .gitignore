@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+cmake-build-debug
+.idea/BananaPi_MFRC522.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+cmake-build-debug/
